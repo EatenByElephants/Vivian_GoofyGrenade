@@ -26,7 +26,7 @@ public class GrenadeScr : MonoBehaviour
 
     public void Explode()
     {
-        Instantiate(confetti, transform.position, Quaternion.identity);
+        var cinst = Instantiate(confetti, transform.position, Quaternion.identity);
         playerObj.GetComponent<PlayerScr>().g = false;
         Destroy(gameObject);
     }

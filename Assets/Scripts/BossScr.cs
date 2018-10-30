@@ -1,27 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class BossScr : MonoBehaviour
 {
 
     //  public Transform goal;
     public Transform player;
-
+    public Transform boss;
     // Use this for initialization
-    void Update()
+    void OnTriggerEnter(Collider col)
     {
-        NavMeshAgent agent = GetComponent<NavMeshAgent>();
-        NavMeshHit hit;
-
-        Debug.Log(player.position);
-        Debug.Log(agent.destination);
-        if (NavMesh.SamplePosition(player.position, out hit, 10f, NavMesh.AllAreas))
+        Debug.Log(col.gameObject.tag);
+        if (col.CompareTag("Ground"))
         {
-            agent.destination = hit.position;
+            GetComponent<Rigidbody>().AddForce(new Vector3(10*(player.position.x - boss.position.x), 200, 10*(player.position.z - boss.position.z)));
         }
-
     }
+
 }
-	
+
