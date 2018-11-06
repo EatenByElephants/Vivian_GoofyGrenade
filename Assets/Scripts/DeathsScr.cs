@@ -5,10 +5,12 @@ using UnityEngine;
 public class DeathsScr : MonoBehaviour
 {
     public GameObject boss;
+    public GameObject player;
     // Use this for initialization
     void Start()
     {
         boss = GameObject.Find("BossParent");
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -17,6 +19,10 @@ public class DeathsScr : MonoBehaviour
         if (boss.transform.position.y < 0)
         {
             Win();
+        }
+        if (player.transform.position.y < 0)
+        {
+            Death();
         }
 
     }
