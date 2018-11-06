@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossScr : MonoBehaviour
 {
-
+    public GameObject death;
     //  public Transform goal;
     public Transform player;
     public Transform boss;
@@ -15,6 +15,10 @@ public class BossScr : MonoBehaviour
         if (col.CompareTag("Ground"))
         {
             GetComponent<Rigidbody>().AddForce(new Vector3(10*(player.position.x - boss.position.x), 200, 10*(player.position.z - boss.position.z)));
+        }
+        if (boss.position.y > player.position.y && col.CompareTag("P"))
+        {
+            death.GetComponent<DeathsScr>().Death();
         }
     }
 

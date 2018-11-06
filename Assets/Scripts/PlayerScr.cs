@@ -18,7 +18,8 @@ public class PlayerScr : MonoBehaviour {
         {
          //Debug.Log("held!");
         gInstance = Instantiate(grenade, rightHand.position, Quaternion.identity);
-          grenade.GetComponent<GrenadeScr>().playerObj = gameObject;
+          gInstance.GetComponent<GrenadeScr>().playerObj = gameObject;
+            gInstance.GetComponent<Rigidbody>().AddForce(800 *(transform.GetChild(1).GetChild(0).GetChild(5).forward));
           g = true;
        }
        if(OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger)){

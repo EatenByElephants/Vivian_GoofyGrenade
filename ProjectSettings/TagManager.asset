@@ -7,6 +7,7 @@ TagManager:
   - Hand
   - Ground
   - Boss
+  - P
   layers:
   - Default
   - TransparentFX
