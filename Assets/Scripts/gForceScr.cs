@@ -8,7 +8,7 @@ public class gForceScr : MonoBehaviour {
     // Use this for initialization
     void Start () {
         boss = GameObject.Find("BossParent");
-        if (Vector3.Distance(boss.transform.position, transform.position) <= 100)
+        if (Vector3.Distance(boss.transform.position, transform.position) <= 10)
         {
            
             Vector3 dir = boss.transform.position - transform.position;
