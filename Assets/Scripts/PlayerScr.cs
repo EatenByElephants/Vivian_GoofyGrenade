@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerScr : MonoBehaviour {
+    public bool CanShoot;
     public Transform rightHand;
     public GameObject grenade;
     GameObject gInstance;
@@ -10,11 +11,12 @@ public class PlayerScr : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         g = false;
+        CanShoot = true;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) != 0.0f && !g)
+		if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) != 0.0f && !g && CanShoot)
         {
          //Debug.Log("held!");
         gInstance = Instantiate(grenade, rightHand.position, Quaternion.identity);

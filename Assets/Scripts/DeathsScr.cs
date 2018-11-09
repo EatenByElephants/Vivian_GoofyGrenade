@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DeathsScr : MonoBehaviour
 {
+    public GameObject WinC;
+    public GameObject DeathC;
     public GameObject boss;
     public GameObject player;
     // Use this for initialization
@@ -29,9 +31,12 @@ public class DeathsScr : MonoBehaviour
    public void Death()
     {
         Debug.Log("Ya Deathed");
+        DeathC.SetActive(true);
+        player.GetComponent<PlayerScr>().CanShoot = false;
     }
     void Win()
     {
         Debug.Log("Boss Killed");
+        WinC.SetActive(true);
     }
 }
