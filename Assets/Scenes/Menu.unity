@@ -1613,6 +1613,11 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!4 &988158938 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 481164, guid: ce816f2e6abb0504092c23ed9b970dfd,
+    type: 2}
+  m_PrefabInternal: {fileID: 2020000773}
 --- !u!1 &1040357779
 GameObject:
   m_ObjectHideFlags: 0
@@ -3433,6 +3438,26 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &2020000774 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100008, guid: ce816f2e6abb0504092c23ed9b970dfd,
+    type: 2}
+  m_PrefabInternal: {fileID: 2020000773}
+--- !u!114 &2020000775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2020000774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ac8145650e30147bc95ede658cfdb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CanShoot: 0
+  rightHand: {fileID: 988158938}
+  grenade: {fileID: 1382797498361290, guid: e82d542149b32c34990c59a449f034f6, type: 2}
+  g: 0
 --- !u!1 &2030903197
 GameObject:
   m_ObjectHideFlags: 0
