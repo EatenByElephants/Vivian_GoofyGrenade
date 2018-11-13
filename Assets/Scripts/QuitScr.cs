@@ -5,6 +5,7 @@ using UnityEngine;
 public class QuitScr : MonoBehaviour {
 
 	public void QuitGame () {
+        Debug.Log("Quit");
         Application.Quit();
 	}
 }
