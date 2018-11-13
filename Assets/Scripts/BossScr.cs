@@ -21,11 +21,6 @@ public class BossScr : MonoBehaviour
             death.GetComponent<DeathsScr>().Death();
         }
     }
-void update()
-    {
-        Vector3 dir = player.position - boss.position;
-        Quaternion toRotation = Quaternion.FromToRotation(boss.transform.up, dir);
-        boss.transform.rotation = Quaternion.Lerp(boss.transform.rotation, toRotation, 100 * Time.time);
-    }
+
 }
 
